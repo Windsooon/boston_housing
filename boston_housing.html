@@ -13143,7 +13143,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13219,32 +13219,23 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
-<span class="n">minimum_price</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">minimum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Maximum price of the data</span>
-<span class="n">maximum_price</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">maximum_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Mean price of the data</span>
-<span class="n">mean_price</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># TODO: Median price of the data</span>
+<span class="n">median_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">get_median</span><span class="p">(</span><span class="n">prices</span><span class="p">):</span>
-    <span class="n">prices</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">prices</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">prices</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">prices</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span>
-
-<span class="n">median_price</span> <span class="o">=</span> <span class="n">get_median</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
-
-<span class="kn">import</span> <span class="nn">statistics</span>
 <span class="c1"># TODO: Standard deviation of prices of the data</span>
-<span class="n">std_price</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+<span class="n">std_price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
 
 <span class="c1"># Show the calculated statistics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Statistics for Boston housing dataset:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13275,7 +13266,7 @@ Minimum price: $105000.00
 Maximum price: $1024800.00
 Mean price: $454342.94
 Median price $438900.00
-Standard deviation of prices: $165340.28
+Standard deviation of prices: $165171.13
 </pre>
 </div>
 </div>
@@ -13334,7 +13325,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -13404,7 +13395,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -13462,7 +13453,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
@@ -13682,7 +13673,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-6---&#22238;&#31572;:">&#38382;&#39064; 6 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-6---&#22238;&#31572;:">&#182;</a></h3><p>我觉得max_depth为3的不错</p>
+<h3 id="&#38382;&#39064;-6---&#22238;&#31572;:">&#38382;&#39064; 6 - &#22238;&#31572;:<a class="anchor-link" href="#&#38382;&#39064;-6---&#22238;&#31572;:">&#182;</a></h3><p>我觉得max_depth为4的最好，因为之后的验证分数就不再提高了。</p>
 
 </div>
 </div>
@@ -13735,8 +13726,8 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#38382;&#39064; 8 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-8---&#22238;&#31572;&#65306;">&#182;</a></h3><ol>
-<li>把数据分成 K 份，每次把其中一份当成测试数据，剩下的当成训练数据，测试 K 次。 </li>
-<li>使用 cv 参数，默认分为3份。</li>
+<li>把训练数据分成 K 份，每次把其中一份当成测试数据，剩下的当成训练数据，测试 K 次。 </li>
+<li>遍历所有参数有可能的组合，每个组合都使用k-fold验证来得到平均分数，最终选出分数最高的组合。</li>
 <li>不同的选择参数在不同的k折测试集中的分数以及平均分数。</li>
 <li>K折交叉验证能够把数据合理地分成训练集和测试集，而且能充分利用所有数据，也就是所有数据都用作训练/测试过。</li>
 </ol>
@@ -13763,7 +13754,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -13778,7 +13769,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
     <span class="c1"># Create cross-validation sets from the training data</span>
     <span class="c1"># sklearn version 0.18: ShuffleSplit(n_splits=10, test_size=0.1, train_size=None, random_state=None)</span>
     <span class="c1"># sklearn versiin 0.17: ShuffleSplit(n, n_iter=10, test_size=0.1, train_size=None, random_state=None)</span>
-    <span class="n">cv_sets</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+    <span class="n">cv_sets</span> <span class="o">=</span> <span class="n">ShuffleSplit</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 
     <span class="c1"># TODO: Create a decision tree regressor object</span>
     <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">41</span><span class="p">)</span>
@@ -13825,7 +13816,7 @@ PTRATIO: 学生与老师数目比越高的话，教育水平较好，价格<stro
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -13952,7 +13943,12 @@ Predicted selling price for Client 3&#39;s home: $931,636.36
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3><p>从数字来说是合理的，不过从实际情况来说，具体要看买方对不同特征的重视程度，如果买方非常重视教育的话，客户1和客户3的教育资源相近，客户1价格可以较高。如果买方重视的是社区环境的话，那么客户3就是不二选择。</p>
+<h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3><p>一开始的价格数据：</p>
+<p>Minimum price: $105000.00
+Maximum price: $1024800.00
+Mean price: $454342.94
+Median price $438900.00</p>
+<p>我们需要房间/贫困指数/学生-老师比例的相近这几个特征的最大值，最小值，平均值，中位数才能做出更好的评判，不过从我们现有的数据来说是合理的，客户2房间数量少，贫苦指数高，教育水平低，所以价格也低。客户3全部都好，所以价格最高，客户2次之。</p>
 
 </div>
 </div>
@@ -14078,7 +14074,8 @@ Range in prices: $29,438.89
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#38382;&#39064; 12 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#182;</a></h3>
+<h3 id="&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#38382;&#39064; 12 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#182;</a></h3><p>运行10次之后，最大值与最小值的差为2万3左右，这样最多5%的价格波动我觉得是可以接受的。</p>
+
 </div>
 </div>
 </div>
